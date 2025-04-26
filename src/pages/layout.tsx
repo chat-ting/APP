@@ -13,7 +13,13 @@ export function PageLayout({ children }: { children: ReactNode }) {
       `}
     >
       <ElectronTitleBar />
-      <div>{children}</div>
+      <div
+        css={css`
+          padding: 0 0.75rem 0 0.75rem;
+        `}
+      >
+        {children}
+      </div>
     </div>
   )
 }
