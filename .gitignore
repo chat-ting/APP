@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+electron/*.js
+electron/**/*.js
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

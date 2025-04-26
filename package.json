@@ -2,14 +2,14 @@
   "name": "chatting",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
-  "main": "electron/main/index.mjs",
+  "main": "electron/main/index.js",
   "scripts": {
     "dev:web": "vite",
-    "build:web": "tsc -b && vite build",
-    "dev": "concurrently \"cross-env NODE_ENV=development BROWSER=none vite\" \"wait-on http://localhost:5173 && electron .\"",
+    "build:web": "yarn tsc-electron && yarn tsc-b && vite build",
+    "dev": "yarn tsc-electron && concurrently \"cross-env NODE_ENV=development BROWSER=none vite\" \"wait-on http://localhost:5173 && electron .\"",
     "build": "vite build && electron-builder",
     "build:win": "yarn build --win --x64",
+    "tsc-electron": "concurrently \"tsc electron/main/index.ts\" \"tsc electron/preload/index.ts\"",
     "lint": "eslint ."
   },
   "build": {
