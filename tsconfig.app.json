@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "baseUrl": "./src",
+    "paths": {
+      "electron/*": ["../electron/*"],
+      "public/*": ["../public/*"],
+      "pages/*": ["pages/*"],
+      "assets/*": ["assets/*"],
+      "components/*": ["components/*"],
+      "constants/*": ["constants/*"],
+      "models/*": ["models/*"],
+      "remotes/*": ["remotes/*"],
+      "styles/*": ["styles/*"],
+      "utils/*": ["utils/*"],
+      "hooks/*": ["hooks/*"],
+      "stores/*": ["stores/*"]
+    },
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "@emotion/react",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true
+  },
+  "include": ["src"]
+}
