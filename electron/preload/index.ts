@@ -5,3 +5,8 @@ contextBridge.exposeInMainWorld('electronAPI', {
   maximize: () => ipcRenderer.send('maximizeApp'),
   close: () => ipcRenderer.send('closeApp'),
 })
+
+contextBridge.exposeInMainWorld('env', {
+  isElectron: true,
+  platform: process.platform as NodeJS.Platform,
+})

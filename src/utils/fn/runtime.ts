@@ -1,10 +1,8 @@
 export function isElectron() {
-  return (
-    typeof window !== 'undefined' &&
-    typeof window.process === 'object' &&
-    window.process.versions != null &&
-    window.process.versions.electron != null
-  )
+  return window?.env?.isElectron
 }
 
 export const isBrowser = () => !isElectron()
+
+export const isMac = () => window.env.platform === 'darwin'
+export const isWin = () => !isMac()

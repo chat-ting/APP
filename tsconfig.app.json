@@ -8,6 +8,7 @@
     "skipLibCheck": true,
     "baseUrl": "./src",
     "paths": {
+      "types/*": ["../types/*"],
       "electron/*": ["../electron/*"],
       "public/*": ["../public/*"],
       "pages/*": ["pages/*"],
@@ -38,5 +39,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"]
+  "include": ["src", "src/types"]
 }
