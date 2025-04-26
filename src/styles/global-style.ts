@@ -46,7 +46,7 @@ export const globalStyles = css`
   li,
   a {
     font-family: 'Gothic A1', sans-serif;
-    letter-spacing: -0.05rem;
+    letter-spacing: -0.03rem;
     font-weight: 400;
   }
 `
