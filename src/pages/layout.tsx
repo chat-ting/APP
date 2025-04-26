@@ -1,4 +1,5 @@
 import { css } from '@emotion/react'
+import { ElectronTitleBar } from 'components/layouts/electron/titlebar'
 import { ReactNode } from 'react'
 
 export function PageLayout({ children }: { children: ReactNode }) {
@@ -11,6 +12,7 @@ export function PageLayout({ children }: { children: ReactNode }) {
         min-height: 100dvh;
       `}
     >
+      <ElectronTitleBar />
       <div>{children}</div>
     </div>
   )
