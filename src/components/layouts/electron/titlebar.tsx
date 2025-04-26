@@ -1,8 +1,11 @@
 import { css } from '@emotion/react'
+import { useAtomValue } from 'jotai/react'
+import { PageTitleAtom } from 'stores/page-title'
 import { isBrowser } from 'utils/fn/runtime'
 
 export function ElectronTitleBar() {
   if (isBrowser()) return null
+  const title = useAtomValue(PageTitleAtom)
   return (
     <div
       css={css`
@@ -26,7 +29,7 @@ export function ElectronTitleBar() {
             font-weight: 500;
           `}
         >
-          챗팅
+          {title}
         </span>
       </div>
     </div>
