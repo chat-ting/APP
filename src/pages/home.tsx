@@ -1,3 +1,11 @@
+import { Link } from 'react-router'
+
 export function Home() {
-  return <>응난 고딕 에이원 적용</>
+  return (
+    <>
+      home
+      <br />
+      <Link to="/chat/3">go to chatroom 3</Link>
+    </>
+  )
 }
