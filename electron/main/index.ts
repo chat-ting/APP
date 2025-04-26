@@ -14,7 +14,11 @@ function createWindow(): void {
     minWidth: 800,
     minHeight: 500,
     frame: false,
-    titleBarStyle: process.platform === 'darwin' ? 'hiddenInset' : 'default',
+    titleBarStyle: 'hidden',
+    titleBarOverlay: {
+      color: '#202225', // Discord 톤 예시
+      symbolColor: '#ffffff',
+    },
     vibrancy: process.platform === 'darwin' ? 'sidebar' : undefined,
     transparent: process.platform === 'darwin',
     icon: join(__dirname, '../../../public/icons/png/icon.png'),
