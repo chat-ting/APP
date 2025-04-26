@@ -9,18 +9,18 @@ let mainWindow: BrowserWindow | null = null
 
 function createWindow(): void {
   mainWindow = new BrowserWindow({
-    width: 900,
-    height: 600,
+    width: 1000,
+    height: 700,
     minWidth: 800,
     minHeight: 500,
     frame: false,
-    titleBarStyle: 'hidden',
+    titleBarStyle: 'hiddenInset',
     titleBarOverlay: {
-      color: '#202225', // Discord 톤 예시
-      symbolColor: '#ffffff',
+      color: '#000000',
+      symbolColor: '#000000',
+      height: 40,
     },
-    vibrancy: process.platform === 'darwin' ? 'sidebar' : undefined,
-    transparent: process.platform === 'darwin',
+
     icon: join(__dirname, '../../../public/icons/png/icon.png'),
     webPreferences: {
       preload: join(__dirname, '../preload/index.js'),
