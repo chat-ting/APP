@@ -3,32 +3,39 @@ import normalize from 'emotion-normalize'
 
 export const globalStyles = css`
   ${normalize}
+  *,*::after,*::before {
+    box-sizing: border-box;
+  }
 
   @font-face {
-    font-family: 'Gothic A1';
-    src: url('/fonts/gothica1-bold-webfont.woff2') format('woff2');
-    font-weight: 700;
-  }
-  @font-face {
-    font-family: 'Gothic A1';
-    src: url('/fonts/gothica1-semibold-webfont.woff2') format('woff2');
-    font-weight: 600;
-  }
-  @font-face {
-    font-family: 'Gothic A1';
-    src: url('/fonts/gothica1-medium-webfont.woff2') format('woff2');
-    font-weight: 500;
-  }
-  @font-face {
-    font-family: 'Gothic A1';
-    src: url('/fonts/gothica1-regular-webfont.woff2') format('woff2');
+    font-family: 'S-CoreDream';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff')
+      format('woff');
     font-weight: 400;
+    font-style: normal;
   }
   @font-face {
-    font-family: 'Gothic A1';
-    src: url('/fonts/gothica1-light-webfont.woff2') format('woff2');
-    font-weight: 300;
+    font-family: 'S-CoreDream';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff')
+      format('woff');
+    font-weight: 600;
+    font-style: normal;
   }
+  @font-face {
+    font-family: 'S-CoreDream';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff')
+      format('woff');
+    font-weight: 700;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'S-CoreDream';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-7ExtraBold.woff')
+      format('woff');
+    font-weight: 800;
+    font-style: normal;
+  }
+
   h1,
   h2,
   h3,
@@ -45,8 +52,8 @@ export const globalStyles = css`
   textarea,
   li,
   a {
-    font-family: 'Gothic A1', sans-serif;
-    letter-spacing: -0.03rem;
+    font-family: 'S-CoreDream', sans-serif;
+    font-size: 1rem;
     font-weight: 400;
   }
 `

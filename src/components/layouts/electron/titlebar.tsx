@@ -26,7 +26,7 @@ export function ElectronTitleBar() {
         <span
           css={css`
             font-size: 0.85rem;
-            font-weight: 500;
+            font-weight: 400;
           `}
         >
           {title}
