@@ -1,19 +1,17 @@
 import { createHashRouter, Navigate, RouterProvider } from 'react-router'
 import { Home } from './home'
-import { Chatroom } from './chatroom'
+import { Chatroom } from './chat/[chatRoomId]'
+import { RootLayout } from '../components/layouts/root-layout'
 
 const router = createHashRouter([
   {
     path: '/',
-    element: <Home />,
-  },
-  {
-    path: '/chat/:chatroomId',
-    element: <Chatroom />,
-  },
-  {
-    path: '*',
-    element: <Navigate to="/" replace={true} />,
+    element: <RootLayout />,
+    children: [
+      { index: true, element: <Home /> },
+      { path: 'chat/:chatRoomId', element: <Chatroom /> },
+      { path: '*', element: <Navigate to="/" replace /> },
+    ],
   },
 ])
 
