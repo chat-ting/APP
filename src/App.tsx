@@ -8,7 +8,7 @@ import { globalStyles } from 'styles/global-style'
 function App() {
   return (
     <Providers>
-      <DevTools />
+      <DevTools position="top-right" />
       <Global styles={globalStyles} />
       <PageLayout>
         <Routes />
