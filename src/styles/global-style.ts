@@ -6,7 +6,10 @@ export const globalStyles = css`
   *,*::after,*::before {
     box-sizing: border-box;
   }
-
+  html,
+  body {
+    background-color: var(--color-bg0);
+  }
   @font-face {
     font-family: 'S-CoreDream';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff')
@@ -55,5 +58,11 @@ export const globalStyles = css`
     font-family: 'S-CoreDream', sans-serif;
     font-size: 1rem;
     font-weight: 400;
+    color: var(--color-text);
+  }
+  a {
+    color: var(--color-link);
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
   }
 `
